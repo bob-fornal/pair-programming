@@ -17,6 +17,10 @@
 .table tbody tr {
   border-bottom: 1px solid silver;
 }
+.table tbody tr:hover {
+  background-color: paleturquoise;
+  cursor: pointer;
+}
 
 .table td {
   padding: 0.5em;
