@@ -1,0 +1,10 @@
+
+.table {
+  background-color: silver;
+  padding: 0.25em;
+  min-width: 300px;
+}
+
+.table thead tr {
+  font-weight: bold;
+}

@@ -1,3 +1,15 @@
-[
-  { "user": "bob.fornal" }
-]
+{
+  "headers": [
+    "Username",
+    "Name"
+  ],
+  "content": [
+    {
+      "username": "bob.fornal",
+      "name": "Bob Fornal"
+    }, {
+      "username": "schamir.poliard",
+      "name": "Schamir Poliard"
+    }
+  ]
+}

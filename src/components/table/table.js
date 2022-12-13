@@ -1,4 +1,6 @@
+
 import { useEffect, useState } from "react";
+import './table.css';
 
 function Table() {
   const [data, setData] = useState([]);
@@ -11,7 +13,6 @@ function Table() {
       }
     });
     const data = await response.json();
-    console.log(data);
     setData(data);
   };
 
@@ -19,10 +20,37 @@ function Table() {
     getData();
   }, []);
   
+  if (data && Object.keys(data).length === 0) return 'Loading ...';
   return (
-    <div className="table-wrapper">
-      { data && data.length > 0 && data.map((item) => <p key={ item.user }>{ item.user }</p>) }
-    </div>
+    <table className="table">
+      <thead>
+        <TitleRow headers={ data.headers } />
+      </thead>
+      <tbody>
+        { data.content.map((row, index) => <TableRow key={ index } row={ row } />) }
+      </tbody>
+    </table>
+  );
+}
+
+function TitleRow(props) {
+  const headers = props.headers;
+
+  return (
+    <tr>
+      { headers.map((header, index) => <td key={ index }>{ header }</td>) }
+    </tr>
+  )
+}
+
+function TableRow(props) {
+  const row = props.row;
+  const keys = Object.keys(row);
+
+  return (
+    <tr>
+      { keys.map((key, index) => <td key={ index }>{ row[key] }</td>) }
+    </tr>
   );
 }
 
