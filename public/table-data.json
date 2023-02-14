@@ -1,15 +1,21 @@
 {
-  "headers": [
-    "Username",
-    "Name"
+  "structure": [
+    { "key": "username", "title": "Username", "type": "string" },
+    { "key": "name", "title": "Name", "type": "string" },
+    { "key": "startDate", "title": "Start Date", "type": "date" },
+    { "key": "email", "title": "Email", "type": "email" }
   ],
   "content": [
     {
       "username": "bob.fornal",
-      "name": "Bob Fornal"
+      "name": "Bob Fornal",
+      "startDate": "2020-12-13T12:00:00.000Z",
+      "email": "bob.fornal@test.com"
     }, {
       "username": "schamir.poliard",
-      "name": "Schamir Poliard"
+      "name": "Schamir Poliard",
+      "startDate": "2022-01-01T12:00:00.000Z",
+      "email": "schamir.poliard@test.com"
     }
   ]
 }
